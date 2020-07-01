@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resize Event</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .resizable {
+            width: 200px;
+            height: 100px;
+            border: 2px solid;
+            resize: both;
+            margin-bottom: 10px;
+            overflow: auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="result">
+        <p>Resize any divs below.</p>
+    </div>
+
+    <div class="resizable" data-index="1">
+        <p>Index 1<br>Fires resize event</p>
+    </div>
+    <div class="resizable" data-index="2">
+        <p>Index 2<br>Does not fire resize event</p>
+    </div>
+    <div class="resizable" data-index="3">
+        <p>Index 3<br>Fires resize event</p>
+    </div>
+
+    <script src="../dist/element-resize-event.js"></script>
+    <script>
+        (function () {
+            const elements = document.querySelectorAll('.resizable');
+            const result = document.querySelector('.result');
+
+            elements.forEach(el => {
+                el.addEventListener("resize", function (e) {
+                    console.log("resize", this.dataset.index);
+                    result.textContent = `Last Resized Div: ${this.dataset.index}`;
+                });
+
+                ObserveResize.subscribe(el);
+            });
+
+            ObserveResize.unsubscribe(elements[1]);
+
+        })();
+    </script>
+</body>
+
+</html>

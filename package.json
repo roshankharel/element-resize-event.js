@@ -1,6 +1,6 @@
 {
   "name": "element-resize-events.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/element-resize-event.js",
   "module": "src/element-resize-event.js",

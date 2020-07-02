@@ -2,8 +2,8 @@
   "name": "element-resize-events.js",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/element-resize-events.js",
-  "module": "src/element-resize-events.js",
+  "main": "dist/element-resize-event.js",
+  "module": "src/element-resize-event.js",
   "scripts": {
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"

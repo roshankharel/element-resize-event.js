@@ -4,6 +4,7 @@
   "description": "",
   "main": "dist/element-resize-events.js",
   "module": "src/element-resize-events.js",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "scripts": {
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"

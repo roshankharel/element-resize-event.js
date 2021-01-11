@@ -1,6 +1,6 @@
 # Intro
 
-Enabels listening to resize events on any HTMLElement
+Enables listening to resize events on any HTMLElement
 
 # How to use
 
@@ -28,7 +28,7 @@ Enabels listening to resize events on any HTMLElement
 ```
 
 ``` javascript
-const element = document.querySelectorAll('.resizable');
+const element = document.querySelector('.resizable');
 
 // add this line to listen for resize event
 ObserveResize.subscribe(element);
